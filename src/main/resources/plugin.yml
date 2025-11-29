@@ -1,0 +1,5 @@
+name: UtilityTool
+version: 1.0
+main: dev.vintage.Carnage
+api-version: 1.21
+description: "UtilityTool for Server Admins, made with <3 by Vintage."
