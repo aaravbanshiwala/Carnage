@@ -73,7 +73,8 @@ The developer assumes **no responsibility** for:
 Use at your own risk.
 
 ## LICENSE
-```Copyright (c) 2025 Aarav Banshiwala
+```
+Copyright (c) 2025 Aarav Banshiwala
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to use
